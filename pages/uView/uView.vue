@@ -1,5 +1,13 @@
 <template>
 	<view>
+		<u--input
+		class="myInput"
+		    placeholder="请输入内容"
+		    border="surround"
+		    v-model="value"
+		    @change="change"
+		  ></u--input>
+		<u-icon name="fingerprint"></u-icon>
 		<u-action-sheet :actions="list" :title="title" :show="show"></u-action-sheet>
 		<u-button @click="show = true">打开ActionSheet</u-button>
 	</view>
@@ -32,6 +40,10 @@
 	};
 </script>
 
-<style>
+<style lang="scss">
+	.myInput{
+		border: 1px solid;
+		border-radius: 10px;
+	}
 
 </style>
